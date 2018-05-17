@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server>
+    <Service name="service1" reload="true">
+        <Connector name="connector1" containerName="container1" port="9090">
+            <Executor corePoolSize="4" maximumPoolSize="32"/>
+        </Connector>
+        <Container name="container1" connectorName="connector1"/>
+    </Service>
+    <Service name="service2" reload="true">
+        <Connector name="connector2" containerName="container2" port="9191">
+            <Executor corePoolSize="4" maximumPoolSize="32"/>
+        </Connector>
+        <Container name="container2" connectorName="connector2"/>
+    </Service>
+</Server>
