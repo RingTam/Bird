@@ -108,7 +108,7 @@ public class StandardConnector implements Connector {
         while (working) {
             try {
                 Socket socket = serverSocket.accept();
-                executor.execute(new Connect(socket));
+                threadPoolExecutor.execute(new Connect(socket));
             } catch (IOException e) {
                 e.printStackTrace();
             }
