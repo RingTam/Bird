@@ -1,4 +1,4 @@
-package org.bird.sar;
+package org.bird.war;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,12 +12,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
- * 类名：Sar
+ * 类名：War
  * 作者：Monster
  * 时间：2016/1/11 14:11
  * 说明：
  */
-public class Sar {
+public class War {
 
     /**
      * 解压
@@ -39,15 +39,15 @@ public class Sar {
      */
     protected void unpack(File file, File tartDir) throws IOException {
         ZipFile zipFile = new ZipFile(file);
-        File sarDir = getWarDirFile(tartDir, getWarName(file));
+        File warDir = getWarDirFile(tartDir, getWarName(file));
         for (Enumeration<? extends ZipEntry> entries = zipFile.entries();
              entries.hasMoreElements(); ) {
             ZipEntry zipEntry = entries.nextElement();
             if (zipEntry.isDirectory()) {
-                mkdirsWar(sarDir, zipEntry);
+                mkdirsWar(warDir, zipEntry);
                 continue;
             }
-            writeEntry(sarDir, zipFile, zipEntry);
+            writeEntry(warDir, zipFile, zipEntry);
         }
         zipFile.close();
     }
@@ -67,81 +67,81 @@ public class Sar {
      * 写 条目
      * 将压缩包里面的每一个条目，写入文件。
      *
-     * @param sarDir   sar文件夹
+     * @param warDir   war文件夹
      * @param zipFile  zip文件
      * @param zipEntry zip条目
      * @throws IOException 输入输出异常
      */
-    private void writeEntry(File sarDir, ZipFile zipFile, ZipEntry zipEntry)
+    private void writeEntry(File warDir, ZipFile zipFile, ZipEntry zipEntry)
             throws IOException {
         InputStream is = zipFile.getInputStream(zipEntry);
-        Files.copy(is, getWarEntryPath(sarDir, zipEntry),
+        Files.copy(is, getWarEntryPath(warDir, zipEntry),
                 StandardCopyOption.REPLACE_EXISTING);
     }
 
     /**
-     * 创建 sar文件夹
+     * 创建 war文件夹
      *
-     * @param sarDir   sar文件夹
+     * @param warDir   war文件夹
      * @param zipEntry zip条目
      */
-    private void mkdirsWar(File sarDir, ZipEntry zipEntry) {
-        File file = getWarEntryFile(sarDir, zipEntry);
+    private void mkdirsWar(File warDir, ZipEntry zipEntry) {
+        File file = getWarEntryFile(warDir, zipEntry);
         file.mkdirs();
     }
 
     /**
-     * 获取 sar条目文件
+     * 获取 war条目文件
      *
-     * @param sarDir   sar文件夹
+     * @param warDir   war文件夹
      * @param zipEntry zip条目
      * @return 文件
      */
-    private File getWarEntryFile(File sarDir, ZipEntry zipEntry) {
-        return new File(sarDir, zipEntry.getName());
+    private File getWarEntryFile(File warDir, ZipEntry zipEntry) {
+        return new File(warDir, zipEntry.getName());
     }
 
     /**
-     * 获取 sar条目路径
+     * 获取 war条目路径
      *
-     * @param sarDir   sar文件夹
+     * @param warDir   war文件夹
      * @param zipEntry zip条目
      * @return 文件
      */
-    private Path getWarEntryPath(File sarDir, ZipEntry zipEntry) {
-        return Paths.get(sarDir.getPath(), zipEntry.getName());
+    private Path getWarEntryPath(File warDir, ZipEntry zipEntry) {
+        return Paths.get(warDir.getPath(), zipEntry.getName());
     }
 
     /**
-     * 获取 sar文件夹
+     * 获取 war文件夹
      *
      * @param file    文件
-     * @param sarName sar名称
+     * @param warName war名称
      * @return 文件
      */
-    private File getWarDirFile(File file, String sarName) {
-        return new File(file, sarName);
+    private File getWarDirFile(File file, String warName) {
+        return new File(file, warName);
     }
 
     /**
-     * 获取 sar文件名
+     * 获取 war文件名
      *
-     * @param sarPath sar路径
-     * @return sar名称
+     * @param warPath war路径
+     * @return war名称
      */
-    protected String getWarName(String sarPath) {
-        int lastIndex = sarPath.lastIndexOf(File.separatorChar);
+    protected String getWarName(String warPath) {
+        int lastIndex = warPath.lastIndexOf(File.separatorChar);
         if (lastIndex == -1) {
-            return sarPath.substring(0, sarPath.indexOf('.'));
+            return warPath.substring(0, warPath.indexOf('.'));
         }
-        return sarPath.substring(lastIndex, sarPath.indexOf('.'));
+        return warPath.substring(lastIndex, warPath.indexOf('.'));
     }
 
     /**
-     * 获取 sar文件名
+     * 获取 war文件名
      *
      * @param file 文件
-     * @return sar名称
+     * @return war名称
      */
     protected String getWarName(File file) {
         return getWarName(file.getPath());

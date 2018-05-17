@@ -1,4 +1,4 @@
-package org.bird.sar;
+package org.bird.war;
 
 import org.bird.FileDefinition;
 
@@ -6,12 +6,12 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * 类名：Web Sar
+ * 类名：Web War
  * 作者：Monster
  * 时间：2016/1/11 14:11
  * 说明：
  */
-public class WebSar extends Sar {
+public class WebWar extends War {
 
     /**
      * web apps 文件
@@ -32,7 +32,7 @@ public class WebSar extends Sar {
      * @param path         路径
      * @param lastModified 最后一次修改时间
      */
-    public WebSar(String path, long lastModified) {
+    public WebWar(String path, long lastModified) {
         this.path = path;
         this.lastModified = lastModified;
     }
@@ -42,7 +42,7 @@ public class WebSar extends Sar {
      *
      * @param path 路径
      */
-    public WebSar(String path) {
+    public WebWar(String path) {
         this.path = path;
     }
 

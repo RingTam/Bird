@@ -1,7 +1,7 @@
 package org.bird.hot;
 
-import org.bird.sar.SarResources;
-import org.bird.sar.WebSar;
+import org.bird.war.WarResources;
+import org.bird.war.WebWar;
 
 import java.io.File;
 import java.util.TimerTask;
@@ -17,7 +17,7 @@ public class ResourceTimerTask extends TimerTask {
     /**
      * war 资源
      */
-    public static final SarResources warResources = SarResources.getInstance();
+    public static final WarResources warResources = WarResources.getInstance();
     /**
      * 文件
      */
@@ -44,7 +44,7 @@ public class ResourceTimerTask extends TimerTask {
         for (File warFile : warFiles) {
             String path = warFile.getPath();
             if (path.endsWith(".war")) {
-                warResources.put(new WebSar(path,
+                warResources.put(new WebWar(path,
                         warFile.lastModified()));
             }
         }
