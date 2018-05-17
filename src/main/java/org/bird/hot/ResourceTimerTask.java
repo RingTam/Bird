@@ -15,9 +15,9 @@ import java.util.TimerTask;
 public class ResourceTimerTask extends TimerTask {
 
     /**
-     * war 资源
+     * 网应用包资源
      */
-    public static final WebWarResource WAR_RESOURCE = WebWarResource.getInstance();
+    public static final WebWarResource webWarResource = WebWarResource.getInstance();
     /**
      * 文件
      */
@@ -44,7 +44,7 @@ public class ResourceTimerTask extends TimerTask {
         for (File warFile : warFiles) {
             String path = warFile.getPath();
             if (path.endsWith(".war")) {
-                WAR_RESOURCE.add(new WebWar(path,
+                webWarResource.add(new WebWar(path,
                         warFile.lastModified()));
             }
         }

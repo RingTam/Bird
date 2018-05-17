@@ -19,7 +19,7 @@ public class Constants {
      */
     public static final String CONF_DIR = USER_DIR + File.separator + "conf";
     /**
-     * Web应用工作目录
+     * 网应用包工作目录
      */
     public static final String APPS_DIR = USER_DIR + File.separator + "apps";
 }
