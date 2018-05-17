@@ -12,7 +12,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 /**
- * 类名：War
+ * 类名：应用包
  * 作者：Monster
  * 时间：2016/1/11 14:11
  * 说明：
@@ -67,9 +67,9 @@ public class War {
      * 写 条目
      * 将压缩包里面的每一个条目，写入文件。
      *
-     * @param warDir   war文件夹
+     * @param warDir   应用包文件夹
      * @param zipFile  zip文件
-     * @param zipEntry zip条目
+     * @param zipEntry 压缩条目
      * @throws IOException 输入输出异常
      */
     private void writeEntry(File warDir, ZipFile zipFile, ZipEntry zipEntry)
@@ -80,10 +80,10 @@ public class War {
     }
 
     /**
-     * 创建 war文件夹
+     * 创建 应用包文件夹
      *
-     * @param warDir   war文件夹
-     * @param zipEntry zip条目
+     * @param warDir   应用包文件夹
+     * @param zipEntry 压缩条目
      */
     private void mkdirsWar(File warDir, ZipEntry zipEntry) {
         File file = getWarEntryFile(warDir, zipEntry);
@@ -93,8 +93,8 @@ public class War {
     /**
      * 获取 war条目文件
      *
-     * @param warDir   war文件夹
-     * @param zipEntry zip条目
+     * @param warDir   应用包文件夹
+     * @param zipEntry 压缩条目
      * @return 文件
      */
     private File getWarEntryFile(File warDir, ZipEntry zipEntry) {
@@ -104,8 +104,8 @@ public class War {
     /**
      * 获取 war条目路径
      *
-     * @param warDir   war文件夹
-     * @param zipEntry zip条目
+     * @param warDir   应用包文件夹
+     * @param zipEntry 压缩条目
      * @return 文件
      */
     private Path getWarEntryPath(File warDir, ZipEntry zipEntry) {
@@ -113,7 +113,7 @@ public class War {
     }
 
     /**
-     * 获取 war文件夹
+     * 获取 应用包文件夹
      *
      * @param file    文件
      * @param warName war名称
@@ -124,10 +124,10 @@ public class War {
     }
 
     /**
-     * 获取 war文件名
+     * 获取 应用包文件名
      *
-     * @param warPath war路径
-     * @return war名称
+     * @param warPath 应用包路径
+     * @return 应用包名称
      */
     protected String getWarName(String warPath) {
         int lastIndex = warPath.lastIndexOf(File.separatorChar);
@@ -138,10 +138,10 @@ public class War {
     }
 
     /**
-     * 获取 war文件名
+     * 获取 应用包文件名
      *
      * @param file 文件
-     * @return war名称
+     * @return 应用包名称
      */
     protected String getWarName(File file) {
         return getWarName(file.getPath());

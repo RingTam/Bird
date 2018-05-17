@@ -1,6 +1,6 @@
 package org.bird.hot;
 
-import org.bird.war.WarResources;
+import org.bird.war.WebWarResource;
 import org.bird.war.WebWar;
 
 import java.io.File;
@@ -17,7 +17,7 @@ public class ResourceTimerTask extends TimerTask {
     /**
      * war 资源
      */
-    public static final WarResources warResources = WarResources.getInstance();
+    public static final WebWarResource WAR_RESOURCE = WebWarResource.getInstance();
     /**
      * 文件
      */
@@ -44,7 +44,7 @@ public class ResourceTimerTask extends TimerTask {
         for (File warFile : warFiles) {
             String path = warFile.getPath();
             if (path.endsWith(".war")) {
-                warResources.put(new WebWar(path,
+                WAR_RESOURCE.add(new WebWar(path,
                         warFile.lastModified()));
             }
         }
