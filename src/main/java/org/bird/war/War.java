@@ -20,14 +20,18 @@ import java.util.zip.ZipFile;
 public class War {
 
     /**
+     * 扩展名
+     */
+    public static final String EXTENSION_NAME = ".war";
+
+    /**
      * 解压
      *
      * @param file 文件
      * @throws IOException 输入输出异常
      */
     protected void unpack(File file) throws IOException {
-        File parentFile = file.getParentFile();
-        unpack(file, parentFile);
+        unpack(file, file.getParentFile());
     }
 
     /**
@@ -49,7 +53,11 @@ public class War {
             }
             writeEntry(warDir, zipFile, zipEntry);
         }
-        zipFile.close();
+        try {
+            zipFile.close();
+        } catch (IOException e) {
+            //Ignore
+        }
     }
 
     /**

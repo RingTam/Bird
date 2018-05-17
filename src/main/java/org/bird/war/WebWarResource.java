@@ -14,7 +14,7 @@ public class WebWarResource {
     /**
      * 网应用包集合
      */
-    public static final Map<String, WebWar> webWars = new HashMap<>();
+    private static final Map<String, WebWar> webWars = new HashMap<>();
     /**
      * 网应用资源
      */

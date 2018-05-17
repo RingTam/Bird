@@ -14,10 +14,6 @@ import java.io.IOException;
 public class WebWar extends War {
 
     /**
-     * web apps 文件
-     */
-    private static final File appsFile = FileDefinition.getAppsFile();
-    /**
      * 路径
      */
     private String path;
