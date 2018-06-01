@@ -47,6 +47,23 @@ public class StringUtils {
                 cs.toString().trim().length() == 0;
     }
 
+    /**
+     * 是空
+     * StringUtils.isNotEmpty(null)      = false
+     * StringUtils.isNotEmpty("")        = false
+     * StringUtils.isNotEmpty(" ")       = false
+     * StringUtils.isNotEmpty("aa")      = true
+     * StringUtils.isNotEmpty(" aa ")    = true
+     *
+     * @param cs 字符序列
+     * @return 是否
+     */
+    public static boolean isNotEmpty(CharSequence cs) {
+        return cs != null &&
+                cs.length() > 0 &&
+                cs.toString().trim().length() > 0;
+    }
+
 
     /**
      * 值 由

@@ -3,7 +3,7 @@ package org.bird.core;
 import org.apache.log4j.Logger;
 import org.bird.Connector;
 import org.bird.config.ExecutorRegistration;
-import org.bird.net.Connect;
+import org.bird.net.Connection;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -108,9 +108,9 @@ public class StandardConnector implements Connector {
         while (working) {
             try {
                 Socket socket = serverSocket.accept();
-                executor.execute(new Connect(socket));
+                executor.execute(new Connection(socket));
             } catch (IOException e) {
-                e.printStackTrace();
+                //Ignore
             }
         }
     }
