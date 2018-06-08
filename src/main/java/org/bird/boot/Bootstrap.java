@@ -17,7 +17,7 @@ import java.io.IOException;
 public class Bootstrap {
 
     /**
-     * 记录器
+     * 日志器
      */
     private static final Logger logger = Logger.getLogger(ServerConfig.class);
 

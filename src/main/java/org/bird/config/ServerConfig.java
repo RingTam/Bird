@@ -20,7 +20,7 @@ import java.util.List;
 public class ServerConfig {
 
     /**
-     * 记录器
+     * 日志器
      */
     private static final Logger logger = Logger.getLogger(ServerConfig.class);
     /**

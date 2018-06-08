@@ -19,7 +19,7 @@ import java.util.Date;
 public class Connection implements Runnable {
 
     /**
-     * 记录器
+     * 日志器
      */
     private static Logger logger = Logger.getLogger(Connection.class);
     /**
@@ -48,6 +48,9 @@ public class Connection implements Runnable {
         this.socket = socket;
     }
 
+    /**
+     * 运行
+     */
     @Override
     public void run() {
         try {
@@ -56,7 +59,7 @@ public class Connection implements Runnable {
             String line;
             int lineIndex = 0;
             while ((line = br.readLine()) != null && StringUtils.isNotEmpty(line)) {
-                if(lineIndex == 0) {
+                if (lineIndex == 0) {
                     httpFilterChain.addFilter(new RequestLineFilter(line));
                 } else {
                     httpFilterChain.addFilter(new HeaderFilter(line));
@@ -91,6 +94,9 @@ public class Connection implements Runnable {
         }
     }
 
+    /**
+     * 关闭连接
+     */
     private void closeConnection() {
         if (socket != null) {
             try {

@@ -3,7 +3,7 @@ package org.bird.net;
 /**
  * 类名：Http版本
  * 作者：Monster
- * 时间：2018/6/1 17:00
+ * 时间：2017/12/2 18:10
  * 说明：
  */
 public enum HttpVersion {

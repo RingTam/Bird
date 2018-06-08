@@ -6,17 +6,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 类名：请求
+ * 类名：Http过滤器通道
  * 作者：Monster
- * 时间：2018/6/1 17:10
+ * 时间：2017/12/2 18:10
  * 说明：
  */
 public class HttpFilterChain implements FilterChain {
 
+    /**
+     * 索引
+     */
     int index = 0;
-
+    /**
+     * 过滤器
+     */
     private List<Filter> filters = new ArrayList<>();
 
+    /**
+     * 做过滤
+     *
+     * @param request  请求
+     * @param response 响应
+     * @throws IOException      输入输出异常
+     * @throws ServletException 服务者异常
+     */
     @Override
     public void doFilter(ServletRequest request, ServletResponse response) throws IOException, ServletException {
         if (index == filters.size()) {
@@ -27,6 +40,11 @@ public class HttpFilterChain implements FilterChain {
         filter.doFilter(request, response, this);
     }
 
+    /**
+     * 添加过滤器
+     *
+     * @param filter 过滤器
+     */
     public void addFilter(Filter filter) {
         filters.add(filter);
     }

@@ -21,16 +21,17 @@ import java.util.ResourceBundle;
 public class UTF8Control extends ResourceBundle.Control {
 
     /**
-     * 新 捆绑
-     * @param baseName
-     * @param locale
-     * @param format
-     * @param loader
-     * @param reload
-     * @return
-     * @throws IllegalAccessException
-     * @throws InstantiationException
-     * @throws IOException
+     * 新捆绑
+     *
+     * @param baseName 基础名
+     * @param locale   语言环境
+     * @param format   格式
+     * @param loader   类加载器
+     * @param reload   重载标识
+     * @return 资源绑定
+     * @throws IllegalAccessException 非法访问异常
+     * @throws InstantiationException 实例化异常
+     * @throws IOException            输入输出异常
      */
     @Override
     public ResourceBundle newBundle(String baseName, Locale locale, String format,

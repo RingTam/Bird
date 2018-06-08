@@ -20,7 +20,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class StandardService extends Thread implements Service {
 
     /**
-     * 记录器
+     * 日志器
      */
     private static final Logger logger = Logger.getLogger(StandardService.class);
     /**

@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 public class StandardConnector implements Connector {
 
     /**
-     * 记录器
+     * 日志器
      */
     private static final Logger logger = Logger.getLogger(StandardConnector.class);
     /**

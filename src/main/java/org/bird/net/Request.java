@@ -6,18 +6,27 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.Principal;
-import java.util.*;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.Locale;
+import java.util.Map;
 
 /**
  * 类名：请求
  * 作者：Monster
- * 时间：2018/6/1 17:10
+ * 时间：2017/12/2 18:10
  * 说明：
  */
 public class Request implements HttpServletRequest {
 
-    private Enumeration<String> headers = new Hashtable<>();
+    /**
+     * 头列举
+     */
+    private Enumeration<String> headers;
 
+    /**
+     * 方法
+     */
     private String method;
 
     @Override

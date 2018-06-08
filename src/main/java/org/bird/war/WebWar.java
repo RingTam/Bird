@@ -1,14 +1,12 @@
 package org.bird.war;
 
-import org.bird.FileDefinition;
-
 import java.io.File;
 import java.io.IOException;
 
 /**
  * 类名：网应用包
  * 作者：Monster
- * 时间：2016/1/11 14:11
+ * 时间：2017/6/11 14:11
  * 说明：
  */
 public class WebWar extends War {

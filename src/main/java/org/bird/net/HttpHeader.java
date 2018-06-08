@@ -3,9 +3,9 @@ package org.bird.net;
 import java.util.Enumeration;
 
 /**
- * 类名：请求
+ * 类名：请求头
  * 作者：Monster
- * 时间：2018/6/1 17:10
+ * 时间：2017/12/2 18:10
  * 说明：
  */
 public class HttpHeader {
@@ -20,6 +20,11 @@ public class HttpHeader {
 
     class NamesEnumeration implements Enumeration<String> {
 
+        private HttpHeader httpHeader;
+
+        public NamesEnumeration(HttpHeader httpHeader) {
+            this.httpHeader = httpHeader;
+        }
 
         @Override
         public boolean hasMoreElements() {
@@ -33,6 +38,14 @@ public class HttpHeader {
     }
 
     class ValueEnumeration implements Enumeration<String> {
+
+        private HttpHeader httpHeader;
+        private String name;
+
+        public ValueEnumeration(HttpHeader httpHeader, String name) {
+            this.httpHeader = httpHeader;
+            this.name = name;
+        }
 
         @Override
         public boolean hasMoreElements() {
