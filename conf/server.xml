@@ -6,10 +6,10 @@
         </Connector>
         <Container name="container1" connectorName="connector1"/>
     </Service>
-    <!--<Service name="service2" reload="true">-->
-        <!--<Connector name="connector2" containerName="container2" port="8181">-->
-            <!--<Executor corePoolSize="4" maximumPoolSize="32"/>-->
-        <!--</Connector>-->
-        <!--<Container name="container2" connectorName="connector2"/>-->
-    <!--</Service>-->
+    <Service name="service2" reload="true">
+        <Connector name="connector2" containerName="container2" port="8181">
+            <Executor corePoolSize="4" maximumPoolSize="32"/>
+        </Connector>
+        <Container name="container2" connectorName="connector2"/>
+    </Service>
 </Server>
