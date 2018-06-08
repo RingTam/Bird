@@ -1,9 +1,8 @@
 package org.bird.util;
 
 /**
- * 类名：字符工具类
+ * 类名：字符工具
  * 作者：Monster
- * 时间：2015/12/4 11:53
  * 说明：
  */
 public class CharacterUtils {

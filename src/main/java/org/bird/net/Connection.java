@@ -13,7 +13,6 @@ import java.util.Date;
 /**
  * 类名：连接
  * 作者：Monster
- * 时间：2015/12/30 17:41
  * 说明：
  */
 public class Connection implements Runnable {

@@ -8,7 +8,6 @@ import java.util.concurrent.Executor;
 /**
  * 类名：连接器
  * 作者：Monster
- * 时间：2016/1/12 15:00
  * 说明：
  */
 public interface Connector {

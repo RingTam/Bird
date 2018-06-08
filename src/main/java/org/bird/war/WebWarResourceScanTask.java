@@ -6,7 +6,6 @@ import java.util.TimerTask;
 /**
  * 类名：网应用包资源扫描任务
  * 作者：Monster
- * 时间：2017/6/11 14:11
  * 说明：
  */
 public class WebWarResourceScanTask extends TimerTask {

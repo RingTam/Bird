@@ -16,7 +16,6 @@ import java.util.concurrent.TimeUnit;
 /**
  * 类名：标准连接器
  * 作者：Monster
- * 时间：2015/12/31 14:08
  * 说明：
  */
 public class StandardConnector implements Connector {

@@ -9,7 +9,6 @@ import java.io.IOException;
 /**
  * 类名：头拦截器
  * 作者：Monster
- * 时间：2017/12/2 18:10
  * 说明：
  */
 public class HeaderFilter extends FilterBase {

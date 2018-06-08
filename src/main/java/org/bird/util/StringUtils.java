@@ -1,9 +1,8 @@
 package org.bird.util;
 
 /**
- * 类名：字符串工具类
+ * 类名：字符串工具
  * 作者：Monster
- * 时间：2015/12/22 18:47
  * 说明：
  */
 public class StringUtils {

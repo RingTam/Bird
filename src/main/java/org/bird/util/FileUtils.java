@@ -5,9 +5,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * 类名：文件工具类
+ * 类名：文件工具
  * 作者：Monster
- * 时间：2016/1/11 14:27
  * 说明：
  */
 public class FileUtils {

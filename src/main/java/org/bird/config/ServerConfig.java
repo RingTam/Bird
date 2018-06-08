@@ -14,7 +14,6 @@ import java.util.List;
 /**
  * 类名：服务器配置
  * 作者：Monster
- * 时间：2016/1/6 14:41
  * 说明：
  */
 public class ServerConfig {

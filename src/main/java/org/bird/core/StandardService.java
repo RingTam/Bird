@@ -14,7 +14,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * 类名：标准服务
  * 作者：Monster
- * 时间：2016/1/12 14:58
  * 说明：
  */
 public class StandardService extends Thread implements Service {

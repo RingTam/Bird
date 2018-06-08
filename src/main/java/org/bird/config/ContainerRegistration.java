@@ -3,7 +3,6 @@ package org.bird.config;
 /**
  * 类名：容器注册
  * 作者：Monster
- * 时间：2016/1/13 16:07
  * 说明：
  */
 public class ContainerRegistration {

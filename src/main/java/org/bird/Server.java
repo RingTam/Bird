@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * 类名：服务器
  * 作者：Monster
- * 时间：2016/1/12 14:34
  * 说明：
  */
 public interface Server {

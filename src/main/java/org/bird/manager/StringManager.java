@@ -10,7 +10,6 @@ import java.util.ResourceBundle;
 /**
  * 类名：字符串管理者
  * 作者：Monster
- * 时间：2016/1/11 11:04
  * 说明：
  */
 public class StringManager {

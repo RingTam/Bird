@@ -8,7 +8,6 @@ import java.util.List;
 /**
  * 类名：Http过滤器通道
  * 作者：Monster
- * 时间：2017/12/2 18:10
  * 说明：
  */
 public class HttpFilterChain implements FilterChain {

@@ -5,7 +5,6 @@ import java.io.File;
 /**
  * 类名：常量
  * 作者：Monster
- * 时间：2016/1/6 14:52
  * 说明：
  */
 public class Constants {

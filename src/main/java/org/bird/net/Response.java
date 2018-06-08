@@ -11,7 +11,6 @@ import java.util.Locale;
 /**
  * 类名：响应
  * 作者：Monster
- * 时间：2017/12/2 18:10
  * 说明：
  */
 public class Response implements HttpServletResponse {

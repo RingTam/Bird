@@ -3,9 +3,8 @@ package org.bird.util;
 import java.util.List;
 
 /**
- * 类名：集合工具类
+ * 类名：集合工具
  * 作者：Monster
- * 时间：2016/1/6 17:49
  * 说明：
  */
 public class CollectionUtils {

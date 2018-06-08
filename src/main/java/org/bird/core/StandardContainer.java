@@ -9,7 +9,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 /**
  * 类名：标准容器
  * 作者：Monster
- * 时间：2016/1/12 14:36
  * 说明：
  */
 public class StandardContainer implements Container {

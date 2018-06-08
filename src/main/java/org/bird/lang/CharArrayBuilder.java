@@ -5,7 +5,6 @@ import org.bird.util.CharacterUtils;
 /**
  * 类名：字符数组构建器
  * 作者：Monster
- * 时间：2015/12/28 14:53
  * 说明：
  */
 public class CharArrayBuilder {

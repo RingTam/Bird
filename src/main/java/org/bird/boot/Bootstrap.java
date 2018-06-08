@@ -11,7 +11,6 @@ import java.io.IOException;
 /**
  * 类名：引导程序
  * 作者：Monster
- * 时间：2016/1/6 14:22
  * 说明：
  */
 public class Bootstrap {

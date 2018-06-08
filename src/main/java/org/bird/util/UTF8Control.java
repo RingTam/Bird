@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 /**
  * 类名：UTF8控制
  * 作者：Monster
- * 时间：2016/1/11 11:04
  * 说明：
  */
 public class UTF8Control extends ResourceBundle.Control {

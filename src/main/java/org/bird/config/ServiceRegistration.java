@@ -6,7 +6,6 @@ import java.util.List;
 /**
  * 类名：服务注册
  * 作者：Monster
- * 时间：2016/1/12 17:27
  * 说明：
  */
 public class ServiceRegistration {

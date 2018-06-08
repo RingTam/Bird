@@ -5,7 +5,6 @@ import javax.servlet.Filter;
 /**
  * 类名：拦截器基础
  * 作者：Monster
- * 时间：2017/12/2 18:10
  * 说明：
  */
 public abstract class FilterBase implements Filter {
